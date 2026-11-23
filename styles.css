@@ -21,3 +21,18 @@
 
 /* Supplied, authentic project photographs in a compact six-panel sprite. */
 .sprite-photo{display:block;width:100%;min-height:220px;background-image:url("/assets/project-mini.webp");background-repeat:no-repeat;background-size:300% 200%;background-color:#c8dfe2;transition:transform .5s}.tile-0{background-position:0% 0%}.tile-1{background-position:50% 0%}.tile-2{background-position:100% 0%}.tile-3{background-position:0% 100%}.tile-4{background-position:50% 100%}.tile-5{background-position:100% 100%}.photo-card .sprite-photo{position:absolute;inset:0;height:100%;min-height:0}.photo-card:hover .sprite-photo{transform:scale(1.04)}.gallery-item .sprite-photo{height:240px}.before-after .sprite-photo{height:330px;border-radius:22px}.image-dialog .sprite-photo{height:min(72vh,630px);min-height:0}.gallery-item:hover .sprite-photo{transform:scale(1.03)}
+
+/* HD real-project images. Original full-resolution photos overlay the low-res
+   sprite only as a temporary fallback until the six new files are committed. */
+.photo-frame{display:block;position:relative;width:100%;height:100%;overflow:hidden;background:#deeff3}
+.photo-frame .sprite-photo{position:absolute;inset:0;width:100%;height:100%;min-height:0;pointer-events:none}
+.photo-frame .hd-photo{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s;max-width:none}
+.photo-card .photo-frame{position:absolute;inset:0}
+.photo-card .photo-frame .sprite-photo{position:absolute;inset:0}
+.photo-card:hover .photo-frame .hd-photo{transform:scale(1.04)}
+.gallery-item .photo-frame{height:240px}
+.gallery-item:hover .photo-frame .hd-photo{transform:scale(1.03)}
+.before-after .photo-frame{height:330px;border-radius:22px}
+.before-after .photo-frame .hd-photo{border-radius:22px}
+.image-dialog #dialogImage{width:100%;max-height:75vh;object-fit:contain;background:#17384b}
+@media (max-width:620px){.before-after .photo-frame{height:230px}.gallery-item .photo-frame{height:220px}}
