@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Preview: remove disallow and noindex after the client approves launch.
